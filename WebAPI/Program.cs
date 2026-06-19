@@ -8,6 +8,8 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+// Đăng ký Dependency Injection cho Category
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 // Learn more about configuring Swagger/OpenAPI at
 https://aka.ms/aspnetcore/swashbuckle
 
